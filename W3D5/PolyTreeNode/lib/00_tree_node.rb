@@ -22,7 +22,7 @@ class PolyTreeNode
 
     def parent=(parent_node) 
         
-        unless @parent.nil? #@parent.parent?!
+        unless @parent.nil? 
             @parent.children.delete_if { |child| child.object_id == self.object_id} 
         end
 
