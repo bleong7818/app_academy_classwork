@@ -48,7 +48,7 @@ def bonus_anagram?(string1, string2)
             return false
         end
     end
-    true
+    true 
 end
 
 p bonus_anagram?("elvis", "lives")

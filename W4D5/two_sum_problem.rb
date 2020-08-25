@@ -30,14 +30,14 @@ def okay_two_sum?(array, target)
 end
 
 def two_sum?(array, target)
-    hash = Hash.new { |h, k| hash[h = k]}
+    hash = Hash.new { |k, v| hash[k]}
 
-    array.each do |ele| # {0 => 0, 1 => 1, 2 =>5 , 3=> 7}
-        num = target - ele
-        if hash.has_key?(num)
-            return true
+    array.each do |ele|
+        result = target - ele
+        if hash.has_key?(result)
+            true
         else
-            hash[ele] = true # 0 => T, 1 => true
+            hash[ele] = true
         end
     end
     false
