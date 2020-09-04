@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
     def index
-        render plain: "I'm in the index action!"
 
-        users = Users.all
+        users = User.all
         render json: users
         
     end 
 
     def create
-        user = User.new(params.require(:user).permit(:name, :email))  
+        user = User.new(params.require(:user).permit(:username))  
         # replace the `user_attributes_here` with the actual attribute keys
         if user.save
             render json: user
@@ -37,8 +36,9 @@ class UsersController < ApplicationController
         render json: user 
     end
 
+    private
     def user_params
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:usename)
          
     end
 end
