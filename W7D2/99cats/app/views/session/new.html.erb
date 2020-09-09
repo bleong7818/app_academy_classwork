@@ -1,0 +1,14 @@
+<h1>Log In</h1>
+
+
+<form action="<%= users_url %>" method="POST">
+    <label>Username:
+        <input type="text" name="user[user_name]" value="<%=@user.user_name %>">
+    </label>
+    <label>Password:
+        <input type="password" name="user[password]" value="<%=@user.password%>">
+    </label>
+    <label>Sign In
+        <input type="submit"><a href="cats_url"></a>
+    </label>
+</form>
