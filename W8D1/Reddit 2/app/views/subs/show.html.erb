@@ -1,0 +1,15 @@
+<body>
+
+    <h1><strong><%= @sub.title %></strong></h1>
+
+    <p><strong>Description</strong></p>
+
+    <p><%= @sub.description %></p>
+
+    <p><a href="<%= new_post_url %>" method="GET">Make a New Post!</a></p>
+
+   
+    <p><a href="<%= edit_sub_url(@sub) %>" method="GET">Edit</a></p>
+
+
+</body>
