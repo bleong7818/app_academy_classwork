@@ -1,13 +1,15 @@
-// Array.prototype.uniq = function() {
-//     let newArr = [];
+Array.prototype.uniq = function() {
+    let newArr = [];
 
-//     for (let i = 0; i < this.length; i++){
-//         if (!newArr.includes(this[i])) {
-//             newArr.push(this[i])
-//         }
-//     }
-//     return newArr;
-// }
+    for (let i = 0; i < this.length; i++){
+        if (!newArr.includes(this[i])) {
+            newArr.push(this[i])
+        }
+    }
+    return newArr;
+}
+
+console.log([1,2,2,2,3]).uniq
 
 Array.prototype.twoSum = function() {
     let newArr = [];

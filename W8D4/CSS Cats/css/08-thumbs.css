@@ -1,0 +1,36 @@
+/* PHASE 8: Thumbs */
+
+.thumbnails {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* width: 60px; */
+}
+
+.thumbnails:nth-child(3n - 1) {
+    margin: 0px 10px 10px 10px
+}
+
+.thumbnails li {
+    padding: 5px;
+}
+
+a, li, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#thumb {
+    /* border: 1px solid gray; */
+    justify-content: space-evenly;
+    height: 50px;
+    width: 50px;
+}
+
+.thumb::before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
